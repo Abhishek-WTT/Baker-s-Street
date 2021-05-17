@@ -1,0 +1,14 @@
+.cardGrid{
+    display : grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+    margin-left: 2.6rem;
+}
+.cardimgsize{
+    height: 150px;
+}
+
+.card-hover:hover{
+    transform: scale(1.1);
+    /* transition: all ; */
+}

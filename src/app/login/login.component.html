@@ -1,0 +1,23 @@
+<div class="loginForm">
+    <form action="#" >
+        <h1>Login</h1>
+        <div class="emailDiv">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email" [(ngModel)] = "user.email">
+        </div>
+        <div class="passDiv">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password" [(ngModel)] = "user.password">
+        </div>
+    
+        <div class="submit">
+            <input type="submit" (click)="login()" value="Login">
+            <a href="" routerLink="/forgot">Forget password</a>
+        </div>
+        <div class="newUser">
+            <p>New User?</p>
+            <a href="" routerLink='/signup'>Signup here</a>
+        </div>
+    </form>
+
+</div>

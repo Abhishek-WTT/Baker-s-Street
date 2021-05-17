@@ -1,0 +1,84 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    top: 10%;
+    left: 35%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(233, 233, 233, 0.801);
+    border-radius: 4px;
+}
+.loginForm svg {
+    align-items: flex-end;
+    align-self: flex-end;
+    margin: 5px;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+h1{
+    text-align: center;
+}
+form .emailDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+form .passDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+form div i{
+    background-color: teal;
+}
+
+.submit {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.submit input[type = "submit"] {
+    width: 100vw;
+    margin: 5px;
+}
+
+.submit a {
+    width: 100vw;
+    margin: 5px;
+}
+
+.newUser {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.newUser p {
+    width: 100vw;
+    margin: 5px;
+}
+
+.newUser a {
+    width: 100vw;
+    margin: 5px;
+}
+
+.hidden {
+    display: none;
+}

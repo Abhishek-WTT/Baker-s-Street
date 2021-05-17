@@ -1,0 +1,28 @@
+<div class="container">
+    <div class='imag'>
+        <span class="veg" *ngIf="cakeobj.eggless">🟢</span>
+        <span class="veg" *ngIf="!cakeobj.eggless">🔴</span>
+        <img src="{{cakeobj.image}}"><br>
+        <p>Ingredients:</p>
+        <div *ngFor="let ing of cakeobj.ingredients"><li>{{ing}}</li></div>
+    </div>
+    <div class="details">
+        <h3> {{cakeobj.name}}</h3>
+        
+        <p>Ratings:&nbsp;{{cakeobj.ratings}}</p>
+       <h6>Reviews:&nbsp;{{cakeobj.reviews}}</h6>
+      
+<h5>{{cakeobj.description}}</h5>
+        
+        <p> {{cakeobj.likes}}&nbsp;<i class="far fa-thumbs-up"></i></p>
+        <h5>₹ {{cakeobj.price}} </h5>
+        <h5>{{cakeobj.weight}} kg</h5>
+        <h5>Type: &nbsp; {{cakeobj.type}}</h5>
+        <div class="cartbtn">
+        <button (click)="add()">Add To Cart</button><br>
+        
+        <button>Like <i class="far fa-heart"></i></button>
+        </div>
+        </div>
+       
+</div>
