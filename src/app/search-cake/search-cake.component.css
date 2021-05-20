@@ -1,0 +1,36 @@
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left:40px;
+    top:20px;
+}
+.card{
+    margin-bottom: 20px;
+    position:relative;
+}
+.filter{
+    position: relative;
+    left:40%;
+    top:20px;
+    margin:0 0 20px 0;
+}
+.box,.sort{
+    background-color: rgba(0,0,0,0.8);
+    margin:0 2px;
+}
+.sort{
+    border:1px solid var(--gold);
+    color:var(--gold);
+}
+.sort:hover{
+    border:1px solid var(--gold);
+    background-color: var(--gold);
+    color:black;
+}
+.veg{
+    position:absolute;
+    z-index: 2;
+    top:0;
+    right:5px;
+}

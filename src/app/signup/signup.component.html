@@ -1,19 +1,19 @@
 <div class="signupForm">
-    <form action="#" >
+    <form action="#" (submit) = 'signup()' >
         <div class="nameDiv">
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="Name" [(ngModel)]="user.name">
         </div>
 
         <div class="emailDiv">
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="user.email">
         </div>
 
 
         <div class="passDiv">
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="user.password">
         </div>
 
         <div class="submit">

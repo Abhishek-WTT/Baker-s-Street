@@ -2,10 +2,13 @@
     display : grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 1rem;
-    margin-left: 2.6rem;
+    margin-left: 3rem;
+}
+.cardSize{
+    max-width: 240px;
 }
 .cardimgsize{
-    height: 150px;
+    height: 180px;
 }
 
 .card-hover:hover{

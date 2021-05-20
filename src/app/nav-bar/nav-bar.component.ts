@@ -12,10 +12,8 @@ export class NavBarComponent implements OnInit {
   adminflag : any = false;
   email : any ;
   flag : any = true;
-  search() {
-    if(this.searchkey) 
-    this.route.navigate(['/navsearch'], {queryParams:{cakes:this.searchkey}})
-  }
+  searchValues : any;
+  searchValue : any;
 
   constructor( private cs: CommonserviceService, private route: Router) { }
 
@@ -29,6 +27,19 @@ export class NavBarComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+  }
+  logout() {
+    localStorage.removeItem("email")
+    this.route.navigate(['/login'])
+    this.flag = true;
+    this.adminflag = false;
+  };
+
+  search() {
+    this.searchValues = this.searchValue.trim();
+    
+    if (!this.searchValues) return;
+    this.route.navigate(['/search'], { queryParams: { q: this.searchValues } });
   }
 
 }

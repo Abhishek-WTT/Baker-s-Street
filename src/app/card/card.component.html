@@ -1,5 +1,5 @@
 <div class="cardGrid">
-<div class="card card-hover" *ngFor="let cake of cs.allCakes; let i = index" (click)="cakeDetails(i)" style="width: 18rem;">
+<div class="card cardSize card-hover" *ngFor="let cake of cs.allCakes; let i = index" (click)="cakeDetails(i)" style="width: 18rem;">
     <img src="{{ cake.image }}" class="card-img-top cardimgsize" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{ cake.name }}</h5>

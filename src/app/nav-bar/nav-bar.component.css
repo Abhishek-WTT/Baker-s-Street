@@ -1,0 +1,45 @@
+.btnstyle{
+    margin-left: 5px;
+}
+
+.btn-outline{
+    color: rgb(32, 32, 32);
+    background-color: #fdcbcb;
+    border-radius: 4px;
+    padding: 8px;
+    border-color: rgb(65, 64, 64);
+}
+
+.btn-outline:hover{
+    background-color: #520000;
+    color: #fff;
+}
+
+.btnAdmin{
+    margin-left: 40px;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.navStyle{
+    background-color: #3C1321;
+    padding: 10px;
+
+}
+a{
+    font-size: 1.4rem;
+    color: #fff;
+    margin-left: 10px;
+}
+
+
+.form-style{
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+}

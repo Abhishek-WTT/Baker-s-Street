@@ -1,0 +1,52 @@
+.container{
+    position:relative;
+    top:10vh;
+    left:0vw;
+    display: flex;
+    flex-direction: row;
+    height:80vh;
+    width: 60vw;
+    color:var(--gold);
+    overflow: auto;
+    
+}
+
+.details{
+    position: relative;
+    left:15vw;
+    text-align: center;
+    display:grid;
+    grid-template-rows: repeat(6,1fr);
+    height:30px;
+    top:2vh;
+    
+}
+.cartbtn{
+    position: relative;
+    top:10vh;
+    display: flex;
+    flex-direction: row;
+    gap: 2
+
+}
+button{
+    width:8vw;
+    height:5vh;
+}
+.imag{
+    position: relative;
+    top:20px;
+   width:100px;
+   height:100px;
+    left:30px;
+}
+.imag>img{
+    width:230px;
+    height:230px;
+
+}
+.veg{
+position:absolute;
+left:15vw;
+top:0;
+}

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class CommonserviceService {
 allCakes:any = [];
+URL: any = "https://apifromashu.herokuapp.com/api/"
 
   getdata(){
   const apiUrl = "https://apifromashu.herokuapp.com/api/allcakes"

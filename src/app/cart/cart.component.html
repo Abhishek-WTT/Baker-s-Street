@@ -1,0 +1,25 @@
+<div class="cart">
+  <div class="cartItems">
+    <div class="cardHeader">
+      <p>Image</p>
+      <p>Name</p>
+      <p>Price</p>
+      <p>Weight</p>
+      <p>Quantity</p>
+      <button routerLink = '/checkout' type="button" class="btn btn-primary">CHECKOUT</button>
+    </div>
+
+    <div  class="card" *ngFor = "let value of cartItem let i = index">
+
+      <img class="" src="{{ value.image }}" alt="Card image cap"/>
+
+      <p class="card-text">{{ value.name }}</p>
+      <p class="card-text">{{ value.price}}</p>
+      <p class="card-text">{{ value.weight}}</p>
+      <input type="number" value="{{ value.quantity}}">
+      <!-- <p class="card-text">{{ value.quantity}}</p> -->
+      <button (click) = "removeCake(i)" class="btn btn-danger">Remove</button> 
+
+    </div>
+  </div>
+</div>

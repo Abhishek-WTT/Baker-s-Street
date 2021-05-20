@@ -1,45 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"> <i class="fas fa-store"></i> Baker's Street</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <button *ngIf = "adminflag">Admin</button>
-      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul> -->
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-
-          <button class="btn" type="submit" routerLink = "/login" *ngIf = "flag">Login</button>
-          
-          <button *ngIf="!flag"> <i class="fas fa-shopping-cart"></i></button>
-          
-          <button *ngIf = "!flag"><i class="fas fa-shopping-bag"></i>Order</button>
-          
-          <button *ngIf = "!flag">Logout</button>
-        </form>
-        <!-- </div> -->
+<nav class="navbar navbar-expand-lg navStyle">
+  <div class="container-fluid">
+    <div>
+      <a class="navbar-brand" href="#"><i class="fas fa-store"></i> &nbsp; Baker's Street</a>
+      <button *ngIf = "adminflag" class="btnAdmin btn btn-outline-success" routerLink = "/admin" ><i class="fas fa-user-shield"></i></button>
     </div>
-  </nav> 
+
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+
+      <form class="d-flex">
+        <input [(ngModel)]="searchValue" name = 'searchValue' class="form-style me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit" (click)="search()">Search</button>
+        <button class="btn btn-outline-success btnstyle" type="submit" routerLink = "/login" *ngIf = "flag">Login</button>
+        <button *ngIf="!flag" class="btnstyle btn btn-outline-success" routerLink = "/cart"> <i class="fas fa-shopping-cart"></i></button>
+        <button *ngIf = "!flag" class="btnstyle btn btn-outline-success"><i class="fas fa-shopping-bag"></i>Order</button>
+        <button *ngIf = "!flag" class="btnstyle btn-outline" (click)="logout()">Logout</button>
+      </form>
+
+
+    <!-- </div> -->
+  </div>
+</nav>
+
+
+
+
