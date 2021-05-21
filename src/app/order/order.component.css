@@ -1,0 +1,97 @@
+.tail:hover{
+    box-shadow:1px 1px 1px 1px ;
+
+}
+.contain{
+    
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--gold);
+    align-content: center;
+    width: 60%;
+    left: 17%;
+    top: 90px;
+    height: 100%;
+}
+.head,.tail{
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--gold);
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    height: 8vh;
+    display:grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.head>p,.tail>p{
+    position: inherit;
+    top:5px;
+
+}
+.tail{
+    margin-top:15px;
+    transition: ease transform 2s;
+}
+
+.hidden{
+    display: none
+
+}
+.detail{
+    position: relative;
+    background-color:rgba(0,0,0,0.5);
+    }
+.show{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+}
+.tophead{
+position: relative;
+left:40%;
+}
+
+.bodyhead{
+    position: relative;
+    left:40%;
+    top:20px;
+    color:#ffdead;
+    border:1px solid rgba(0,0,0,0.8);
+    background-color: black;
+}
+.heads{
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--gold);
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    height: 8vh;
+    display:grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+}
+.heads>p{
+    position: inherit;
+    top:5px;
+}
+.show>p{
+   text-align: center;
+}
+
+.pic{
+    width:100px;
+    height:100px; 
+} 
+.hidebtn{
+    float:right;
+    border-radius: 5px;
+}
+.detailbtn{
+    border-radius: 5px;
+    width:max-content;
+    height:max-content
+}

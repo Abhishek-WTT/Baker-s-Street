@@ -1,1 +1,8 @@
-<p>place-order works!</p>
+<div class="conatiners">
+    <p>Name:  <span>  {{cs.orderdetails.name}}</span></p>
+    <p>Address: <span>{{cs.orderdetails.address}}</span></p>
+    <p>City:   <span> {{cs.orderdetails.city}}</span></p>
+    <p>Phone:  <span> {{cs.orderdetails.phone}}</span></p>
+    <p>Price:   <span>{{cs.orderdetails.price}}</span></p>
+    <button class="btn btn-primary"(click)="finalize()">Place Order</button>
+</div>

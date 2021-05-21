@@ -1,0 +1,69 @@
+.contain{
+    
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--gold);
+    align-content: center;
+    width: 70%;
+    left: 20%;
+    top: 90px;
+    height: 80vh;
+}
+.hidden{
+    display: none
+
+}
+.orderDetails{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+}
+ .imag,.details,.ordNum{
+    width:80%;
+    align-items:center;
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+}
+
+.pic{
+    width:100px;
+    height:100px; 
+}
+td>.sizes{
+    width:50px;
+    height:50px;
+}
+.minus,.plus{
+    width:10px;
+    height:4px;
+    border:1px solid #999;
+}
+.fa-plus-square,.fa-minus-square,.fa-trash-alt{
+    size:3px;
+    margin:10px,0px;
+}
+.fa-trash-alt{
+    color:red;
+}
+.fa-trash-alt:hover{
+    color:var(--gold);
+    size:6px;
+}
+table{
+    
+        position: relative;
+        min-width:200px;
+        max-width: 80%;
+        left:10%;
+    
+}
+thead,tr{
+    background-color: rgba(0,0,0,0.8);
+    border:1px solid navajowhite;
+    color:var(--gold);
+}
+ tr:hover{
+    
+    color:var(--gold)!important;
+} 

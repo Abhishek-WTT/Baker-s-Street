@@ -1,0 +1,27 @@
+.conatiners{
+    width: 50%;
+    display: flex;
+    height:45vh;
+    position: relative;
+    top:0;
+    left:20vw;
+    color:#ffdead;
+    flex-direction: column;
+    border:1px solid #000;
+    background-color: rgba(0,0,0,0.8);
+}
+.btn-primary{
+    width:15vw;
+    height:10vh;
+position: relative;
+left:40vh;
+top:10px;
+}
+p{
+    position: relative;
+    left:5vw;
+    top:10px;
+}
+span{
+    margin-left: 10px;
+}

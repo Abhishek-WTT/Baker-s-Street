@@ -1,0 +1,14 @@
+<div class="left">
+    <li (click)='summary()' id="summry">Summary</li>
+    <hr>
+    <li *ngIf="cs.checkFlag" (click)="address()" id="order">Address</li>
+    <li  *ngIf="!cs.checkFlag" >Address</li>
+    <hr>
+    <li  *ngIf="cs.confirmFlag" (click)="confirm()" id="confirm">Confirmation</li>
+    <li  *ngIf="!cs.confirmFlag" >Confirmation</li>
+   
+    
+  </div>
+  <div class="right">
+      <router-outlet></router-outlet>
+  </div>

@@ -12,7 +12,7 @@
         <button class="btn btn-outline-success" type="submit" (click)="search()">Search</button>
         <button class="btn btn-outline-success btnstyle" type="submit" routerLink = "/login" *ngIf = "flag">Login</button>
         <button *ngIf="!flag" class="btnstyle btn btn-outline-success" routerLink = "/cart"> <i class="fas fa-shopping-cart"></i></button>
-        <button *ngIf = "!flag" class="btnstyle btn btn-outline-success"><i class="fas fa-shopping-bag"></i>Order</button>
+        <button *ngIf = "!flag" class="btnstyle btn btn-outline-success" routerLink = "/order" ><i class="fas fa-shopping-bag"></i>Order</button>
         <button *ngIf = "!flag" class="btnstyle btn-outline" (click)="logout()">Logout</button>
       </form>
 

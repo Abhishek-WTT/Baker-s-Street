@@ -1,1 +1,48 @@
-<p>order works!</p>
+<body>
+    <label class="bodyhead"><h4>All Order cake List</h4></label>
+    <div class="contain">
+     
+     <div class="head">
+       <p class="heading">#</p>
+       <p class="heading">Order Id</p>
+       <p class="heading">Date</p>
+       <p class="heading">Name</p>
+       <p class="heading">Total Price</p>
+       <p class="heading">Mode</p>
+     </div>
+     <div *ngFor="let parcake of order; let i = index">
+     <div class="tail" (click)="details(i)">
+      <p class="heading">{{ i + 1 }}</p>
+      <p class="heading"  >{{ parcake.orderid }}</p>
+      <p class="heading">{{ parcake.orderdate }}</p>
+  <p class="heading">{{ parcake.name }}</p>
+  <p class="heading">{{ parcake.price }}/-</p>
+  <p class="heading">{{ parcake.mode }}</p>
+  <button class="detailbtn" *ngIf="toggle">See Details</button>
+  
+</div>
+    <div class="detail hidden"  id="cake{{i}}">
+      <hr>
+      <label class="tophead">Bought Cake Details</label>
+      <button (click)="hide(i)"class="hidebtn" *ngIf="!toggle">Hide Details</button>
+      <div class="heads">
+ <p class="heading">Name</p>
+        <p class="heading">price</p>
+        <p class="heading">Quantity</p>
+        <p class="heading">weight</p>
+       
+      </div>
+      <div class="show" *ngFor="let peritem of parcake.cakes">
+         <p><img class="pic"src="{{ peritem.image }}" /></p>
+         <p>{{ peritem.name }}</p>
+          <p>{{ peritem.price }}</p>
+          <p>{{ peritem.quantity }}</p>
+          <p>{{ peritem.weight }}kg</p>
+          
+      </div>
+ 
+
+    </div>
+</div>
+</div>
+</body>

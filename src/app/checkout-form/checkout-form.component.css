@@ -1,0 +1,38 @@
+.left{
+    position: absolute;
+    left: 5px;
+    width: 10%;
+    height: 50vh;
+    top: 90px;
+    list-style: none;
+    color:#ffdead;
+    background-color: rgba(0,0,0,0.8);
+    border: 1px solid;
+}
+li{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    position: relative;
+    top:20px;
+    left:10px;
+    gap:3px;
+}
+.dis{
+    
+        color: currentColor;
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+      
+}
+.right{
+    position: relative;
+    left:6vw;
+    top:20px;
+}
+.active{
+    box-shadow:0 3px 0 0 ;
+    position: relative;
+    left: 1px;
+    top: 13px;
+}
