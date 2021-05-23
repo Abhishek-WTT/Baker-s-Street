@@ -1,14 +1,4 @@
-.contain{
-    
-    position: absolute;
-    background-color: rgba(0,0,0,0.8);
-    color: var(--gold);
-    align-content: center;
-    width: 70%;
-    left: 20%;
-    top: 90px;
-    height: 80vh;
-}
+
 .hidden{
     display: none
 
@@ -61,9 +51,9 @@ table{
 thead,tr{
     background-color: rgba(0,0,0,0.8);
     border:1px solid navajowhite;
-    color:var(--gold);
+    color: #ffdead;
 }
  tr:hover{
     
-    color:var(--gold)!important;
+    color: #fff!important;
 } 

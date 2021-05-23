@@ -39,8 +39,13 @@ export class CakeDetailsComponent implements OnInit {
   }
  add(){
   var api = 'https://apifromashu.herokuapp.com/api/addcaketocart';
-  this.client.post(api, this.cake).subscribe((response) => {
-    console.log("add cake to cart response",response)
+  this.client.post(api, this.cake).subscribe((response: any) => {
+    console.log("add cake to cart response",response);
+
+    if(response.message === "Added to cart"){
+      alert ('Added to cart');
+      this.router.navigate(['/cart']);
+    }
     
   }, (error) => {
     

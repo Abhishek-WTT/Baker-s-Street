@@ -23,6 +23,10 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import { ConfirmDetailsComponent } from './confirm-details/confirm-details.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrderComponent } from './order/order.component';
+import { EditformComponent } from './editform/editform.component';
+import { AddcakeComponent } from './addcake/addcake.component';
+import { GaurdService } from './gaurd.service';
+import { AntigaurdService } from './antigaurd.service';
 
 @NgModule({
   declarations: [
@@ -44,19 +48,24 @@ import { OrderComponent } from './order/order.component';
     PlaceOrderComponent,
     ConfirmDetailsComponent,
     AdminComponent,
-    OrderComponent
+    OrderComponent,
+    EditformComponent,
+    AddcakeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService ,
     multi:true
-  }],
+  },
+  GaurdService,
+  AntigaurdService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

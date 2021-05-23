@@ -13,19 +13,22 @@ import { AddressComponent } from './address/address.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { ConfirmDetailsComponent } from './confirm-details/confirm-details.component';
 import { OrderComponent } from './order/order.component';
+import { GaurdService } from './gaurd.service';
+import { AntigaurdService } from './antigaurd.service';
+import { ResolverService } from './resolver.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canActivate: [GaurdService] },
   { path: 'checkoutform', component : CheckoutFormComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'forgot', component: ForgotComponent },
   { path: 'cake/:id', component: CakeDetailsComponent },
   { path: 'search', component: SearchCakeComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'cart', component: CartComponent , canActivate: [GaurdService], resolve: [ResolverService] },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'order', component: OrderComponent },
-  { path: 'checkout', component: CheckoutFormComponent, children:[{path: 'address', component:AddressComponent}, { path: 'placeOrder', component: PlaceOrderComponent}, {path: '', component: ConfirmDetailsComponent}] }
+  { path: 'checkout', component: CheckoutFormComponent, children:[{path: 'address', component:AddressComponent}, { path: 'placeOrder', component: PlaceOrderComponent, canDeactivate: [AntigaurdService]}, {path: '', component: ConfirmDetailsComponent, canDeactivate: [AntigaurdService]}] }
 ];
 
 @NgModule({

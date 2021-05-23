@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CommonserviceService } from '../commonservice.service';
 
 @Component({
   selector: 'app-search-cake',
@@ -12,7 +13,7 @@ cakedata : any;
 cakesort : any = [];
 price : any = {}
 
-  constructor(private client:HttpClient, private route: ActivatedRoute) { 
+  constructor(private client:HttpClient, private route: ActivatedRoute, private router:Router , public cs: CommonserviceService) { 
     var url = 'https://apifromashu.herokuapp.com/api/searchcakes?q=';
     this.route.queryParams.subscribe((e: any) => {
       if (e.q) {
@@ -37,15 +38,32 @@ price : any = {}
     );
   }
 
-   sort(){
+   filter(){
      if(!this.price.min && !this.price.max){
        alert (`Please enter min or max price`)    
        return ;
       }
-      this.cakesort = this.cakedata.filter((a:any)=> (this.price.min ? a.price >= this.price.min : true) && (this.price.max ? a.price <= this.price.max : true) )
+  //     this.cakesort = this.cakedata.filter((a:any)=> (this.price.min ? a.price >= this.price.min : true) && (this.price.max ? a.price <= this.price.max : true) )
+  //  }
+   if(this.price.min>this.price.max) 
+   {
+    alert ('Searching a wrong way');
+    this.cakesort = this.cakedata;
+    console.log(this.cakesort);
+   }else if (this.price.min || this.price.max)  {
+    this.cakesort = this.cakedata.filter(
+      (fil: any) => 
+        (this.price.min ? fil.price >= this.price.min : true) &&
+          (this.price.max ? fil.price <= this.price.max : true)
+    );
+    console.log(this.cakesort);
+  }
    }
-
   ngOnInit(): void {
   }
 
+  cakeDetails(i:any){
+    this.router.navigate(['/cake', this.cakesort[i].cakeid]);
+    console.log(this.cakesort[i].cakeid);
+  }
 }

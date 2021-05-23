@@ -1,1 +1,26 @@
-<p>admin works!</p>
+<div class="add">
+    <button class="addbtn" name="Add Cake" routerLink="/admin/addcake">Add New cake</button>
+  </div>
+  <div>
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Image</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let parcake of choosecake; let i=index">
+                <th scope="row">{{i+1}}</th>
+            <td><img class="sizes" src="{{parcake.image}}"/></td>
+            <td>{{parcake.name}}</td>
+            <td>{{parcake.price}}/-</td>
+            <td (click)="editform(parcake.cakeid)"><i  class="far fa-edit"></i></td>
+          </tr>
+          
+         </tbody>
+      </table>
+</div>

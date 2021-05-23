@@ -1,8 +1,8 @@
 <div class = "filter">
-  <form (submit) = "sort()">
-    <input name="min" [(ngModel)] = "price.min">
-    <input name="max" [(ngModel)] = "price.max">
-    <button  type = "submit" class = "btn btn-primary">Sort</button>
+  <form (submit) = "filter()">
+    <input type="number" name="min" [(ngModel)] = "price.min" placeholder="Min price"> &nbsp;
+    <input type="number" name="max" [(ngModel)] = "price.max" placeholder="Max price">
+    <button  type = "submit" class = "filterbtn">Filter</button>
   </form>
 </div>
 <div class="cart">
@@ -10,13 +10,13 @@
     <!-- routerLink='/cake/{{cards.cakeid}}' -->
     <div 
       appHovering
-      *ngFor="let cards of cakesort"
+      *ngFor="let cards of cakesort; let i = index"
       class="card"
-      style="width: 18rem"
+      style="width: 18rem" (click)="cakeDetails(i)"
     >
     <span class="veg" *ngIf="cards.eggless">🟢</span>
     <span class="veg" *ngIf="!cards.eggless">🔴</span>
-      <img src="{{ cards.image }}" class="card-img-top" alt="..." />
+      <img src="{{ cards.image }}" class="card-img-top imgSize" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Name:&nbsp;{{ cards.name }}</h5>
         <p class="card-text">Price:&nbsp;₹ {{ cards.price }} </p>

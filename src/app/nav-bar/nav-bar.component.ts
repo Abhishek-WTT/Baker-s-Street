@@ -24,12 +24,15 @@ export class NavBarComponent implements OnInit {
     this.email = localStorage.getItem("email");
     if (this.email) {
       this.flag = false;
+    }else{
+      this.flag = true;
     }
   }
   ngOnInit(): void {
   }
   logout() {
-    localStorage.removeItem("email")
+    localStorage.removeItem("email");
+    localStorage.removeItem("token");
     this.route.navigate(['/login'])
     this.flag = true;
     this.adminflag = false;

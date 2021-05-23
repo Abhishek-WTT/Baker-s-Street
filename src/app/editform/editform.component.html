@@ -1,0 +1,75 @@
+<div class="container">
+  <h2>Edit Cake Details</h2>
+    <form class="row g-2">
+        <div class="col-md-8">
+          <label for="name" class="form-label">Name:</label>
+          <input [(ngModel)]="cakeobj.name" type="email" class="form-control" id="name" name="cakename" >
+        </div>
+        <div class="col-md-12">
+          <label for="owner" class="form-label"><h5>Owner:</h5></label>
+        </div>
+            <div class="col-md-4">
+          <label for="owner" class="form-label">Email:</label>
+          <input [(ngModel)]="cakeobj.owner.email" type="text" class="form-control" id="owner" name="email">
+        </div>
+        <div class="col-md-4">
+            <label for="owner" class="form-label">Name:</label>
+            <input  [(ngModel)]="cakeobj.owner.name"type="text" class="form-control" id="owner" name="name">
+          </div>
+        
+        <div class="col-8">
+          <label for="description" class="form-label">Description:</label>
+          <input  [(ngModel)]="cakeobj.description" name="description" type="text" class="form-control" id="description" placeholder="">
+        </div>
+        <div class="col-md-12">
+          <label for="owner" class="form-label"></label>
+        </div>
+        <div class="col-md-4">
+          <label for="price" class="form-label">Price:</label>
+          <input [(ngModel)]="cakeobj.price" name="price"type="text" class="form-control" id="price">
+        </div>
+        <div class="col-md-4">
+          <label for="type" class="form-label">Type:</label>
+          <input [(ngModel)]="cakeobj.type" name="type" type="text" class="form-control" id="type">
+        </div>
+        <div class="col-md-12">
+          <label for="owner" class="form-label"></label>
+        </div>
+        <div class="col-4">
+          <label for="flavour" class="form-label">Flavour:</label>
+          <input [(ngModel)]="cakeobj.flavour" name="flavour"type="text" class="form-control" id="flavour" placeholder="">
+        </div>
+        <div class="col-md-4">
+          <label for="weight" class="form-label">Weight:</label>
+          <input [(ngModel)]="cakeobj.weight" name="weight" type="text" class="form-control" id="weight">
+        </div>
+        <div class="col-md-12">
+          <label class="form-label" for="indg">Ingredients:</label>
+        </div>
+          <div *ngFor="let ingd of cakeobj.ingredients; let i=index"class="col-md-8">
+          <div  class="ingds col-md-4"  >
+            <input [(ngModel)]="ingredients[i]" name="{{ingredients[i]}}{{i}}" type="text" class="form-control" id="ingdr" placeholder=""><button  class="formbtn"><i (click)="ingdDel(i)" class="far fa-trash-alt"></i></button>
+          </div>
+          </div>
+ <span><button (click)="ingAdd()" class="formbtn"><i class="far fa-plus-square"></i></button></span>        
+         <div class="col-12">
+          <div class="form-check">
+            <input  *ngIf="!cakeobj.eggless"name="eggless"class="form-check-input" type="checkbox" id="eggless">
+            <input  *ngIf="cakeobj.eggless"name="eggless"class="form-check-input" type="checkbox" id="eggless" checked>
+            <label class="form-check-label" for="eggless">
+              Eggless
+            </label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label  class="form-label"></label>
+        </div>
+        <span><img [src]="cakeobj.image" name="image" class="imgsi"></span>
+        <div class="col-4">         
+        <input (change)="upload($event)" type="file" name="imagefile">
+        </div>
+        <div class="col-12">
+          <button (click)="save()"type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+</div>
